@@ -1,0 +1,23 @@
+{
+    "name": "how-i-can-learn",
+    "version": "1.0.0",
+    "description": "",
+    "main": "13_11_todo.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "scss": "node-sass --watch style.scss style.css --outut-style nested"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Nguyenducduy6102000/How-i-can-learn.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Nguyenducduy6102000/How-i-can-learn/issues"
+    },
+    "homepage": "https://github.com/Nguyenducduy6102000/How-i-can-learn#readme",
+    "dependencies": {
+        "node-sass": "^7.0.1"
+    }
+}
