@@ -1,0 +1,128 @@
+@import "reset";
+@import "flex";
+@import "grid";
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+:root {
+    --primary-color: #064663;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 500vh;
+}
+
+.profile {
+    .profile__menu {
+        position: fixed;
+        padding-top: 100px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--primary-color);
+        width: inherit;
+        .profile__menu-img {
+            background: url(/assets/image/IMG_8434.JPG) no-repeat 54% 68%/144%;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 10px solid #0a658f;
+        }
+        .profile__menu-list {
+            margin-top: 40px;
+            .profile__menu-item {
+                text-align: center;
+                padding: 10px 0;
+                &:hover a {
+                    color: white;
+                }
+                a {
+                    color: rgba(255, 255, 255, 0.579);
+                    text-transform: uppercase;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    position: relative;
+                    transition: all .5s;
+                    &.active {
+                        color: white;
+                        &::after {
+                            transform: scaleX(1);
+                            visibility: visible;
+                        }
+                    }
+                    &:hover {
+                        color: white;
+                        &::after {
+                            transform: scaleX(1);
+                            visibility: visible;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        visibility: hidden;
+                        height: .5px;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        background-color: white;
+                        transform: scaleX(0);
+                        transition: .2s;
+                    }
+                }
+            }
+        }
+    }
+    .profile__content {
+        margin-left: 10%;
+        height: 90vh;
+        .profile__content-about {
+            padding-top: 130px;
+            h1 {
+                font-size: 7rem;
+                span {
+                    color: var(--primary-color);
+                }
+            }
+            p {
+                font-size: 1.8rem;
+                &.info {
+                    color: rgb(0, 0, 0);
+                    font-weight: bold;
+                    margin-bottom: 50px;
+                    span {
+                        color: var(--primary-color);
+                    }
+                }
+            }
+            .about__list {
+                display: flex;
+                margin-top: 50px;
+                .about__list-item {
+                    padding: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: var(--primary-color);
+                    margin: 10px;
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    &:hover {
+                        background-color: #0a5d84;
+                        cursor: pointer;
+                    }
+                    .about__list-item-icon {
+                        color: white;
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
