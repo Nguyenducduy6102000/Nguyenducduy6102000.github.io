@@ -1489,7 +1489,7 @@ a {
           display: flex;
           flex-direction: column;
           display: block;
-          padding: 6px 8px; }
+          padding: 4px; }
           .footer .footer__content .footer__qr .footer__qr-apps .footer__qr-link .footer__qr-apps-download-img {
             width: 80px; }
   .footer .footer__bottom {
