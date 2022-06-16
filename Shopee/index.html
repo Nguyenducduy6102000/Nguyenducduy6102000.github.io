@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/reponsive.css">
+    <link rel="icon" type="image/png" href="assets/image/shopee.png" sizes="16x16">
 
-    <title>Document</title>
+
 </head>
 
 <body>
@@ -18,8 +20,8 @@
     <!-- Block Element Modifier -->
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <!-- HEADER MENU -->
+            <div class="grid wide">
+                <!-- Header navbar -->
                 <nav class="header__navbar">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item separate">Kênh người bán</li>
@@ -167,7 +169,7 @@
                         </li>
 
                         <!-- User -->
-                        <!--  <li class="header__navbar-item header__navbar-user">
+                        <!-- <li class="header__navbar-item header__navbar-user">
                             <div class="header__navbar-user-img"></div>
                             <span class="header__navbar-user-name">duyduy6102</span>
                             <ul class="header__navbar-user-menu ">
@@ -184,8 +186,12 @@
                         </li> -->
                     </ul>
                 </nav>
-                <!--HEADER SEARCH -->
+                <!-- Header search -->
                 <div class="header-with-search">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                    </label>
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
                     <!-- LOGO -->
                     <div class="header__logo">
                         <a href="/" class="header__logo-link">
@@ -198,7 +204,7 @@
                             </svg>
                         </a>
                     </div>
-                    <!-- Search -->
+                    <!-- Search input-->
                     <div class="header__search">
                         <div class="header__search-input-wrap">
                             <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
@@ -239,8 +245,11 @@
                     <!-- CART -->
                     <div class="header__cart">
                         <div class="header__cart-wrap">
-                            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
-                            <span class="header__cart-quantity">3</span>
+                            <label style="display: block ;cursor: pointer;" for="show__cart-list" class="">
+                                <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+                            </label>
+                            <input class="header__cart-checkbox" type="checkbox" id="show__cart-list" hidden>
+                            <span class="header__cart-quantity">9</span>
                             <!--NO CART: header__cart-list-no-cart -->
                             <div class="header__cart-list  shadow ">
                                 <!-- <img src="assets/image/no-cart.png" alt="" class="header__cart-no-item-img">
@@ -350,12 +359,28 @@
 
                 </div>
             </div>
+            <!-- Mobile sortbar  -->
+            <ul class="header__sortbar-mobile">
+                <li class="header__sortbar-item">
+                    <a href="#" class="header__sortbar-link active">Liên quan</a>
+                </li>
+                <li class="header__sortbar-item">
+                    <a href="#" class="header__sortbar-link">Mới nhất</a>
+                </li>
+                <li class="header__sortbar-item">
+                    <a href="#" class="header__sortbar-link">Bán chạy</a>
+                </li>
+                <li class="header__sortbar-item">
+                    <a href="#" class="header__sortbar-link">Giá</a>
+                </li>
+            </ul>
         </header>
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__col-2">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col-lg-2 col-0 ">
+                        <!-- Category -->
                         <div class="category ">
                             <div class="category__header">
                                 <i class="category__header-icon fa-solid fa-list"></i>
@@ -400,7 +425,8 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="grid__col-10">
+                    <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
+                        <!-- Sort bar -->
                         <div class="sort-bar">
                             <span class="sort-bar__lable">Sắp xếp theo</span>
                             <button class="sort-bar__btn btn btn--primary shadow">Phổ Biến</button>
@@ -430,10 +456,44 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Mobile category -->
+                        <nav class="mobile__category">
+                            <ul class="mobile__category-list">
+                                <li class="mobile__category-item">
+                                    <a href="" class="mobile__category-link shadow">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile__category-item">
+                                    <a href="" class="mobile__category-link shadow">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile__category-item">
+                                    <a href="" class="mobile__category-link shadow">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+
+                                <li class="mobile__category-item">
+                                    <a href="" class="mobile__category-link shadow">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile__category-item">
+                                    <a href="" class="mobile__category-link shadow">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile__category-item">
+                                    <a href="" class="mobile__category-link shadow">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile__category-item">
+                                    <a href="" class="mobile__category-link shadow">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile__category-item">
+                                    <a href="" class="mobile__category-link shadow">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                                <li class="mobile__category-item">
+                                    <a href="" class="mobile__category-link shadow">Dụng cụ & thiết bị tiện ích</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- Products -->
                         <div class="home-product">
-                            <div class="grid__row">
+                            <div class="row">
                                 <!-- Product item 1-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6 ">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item1.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -492,7 +552,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 2-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item2.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -554,7 +614,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 3-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item3.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -571,7 +631,7 @@
                                                         <path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="#F69113" fill="#f69113"></path>
                                                      </svg>
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
                                             </div>
                                             <div class="product__price">
                                                 <div class="product__price-old"><span>₫</span>198.000</div>
@@ -619,7 +679,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 4-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item4.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -681,7 +741,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 5-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item5.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -704,7 +764,7 @@
                                                         <path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="#F69113" fill="#f69113"></path>
                                                      </svg>
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -753,7 +813,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 6-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item6.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -770,7 +830,7 @@
                                                         <path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="#F69113" fill="#f69113"></path>
                                                      </svg>
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
                                             </div>
                                             <div class="product__price">
                                                 <div class="product__price-old"><span>₫</span>168.000</div>
@@ -819,7 +879,7 @@
                                 </div>
 
                                 <!-- Product item 7-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item7.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -843,7 +903,7 @@
                                                      </svg>
 
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -893,7 +953,7 @@
                                 </div>
 
                                 <!-- Product item 8-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item8.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -917,7 +977,7 @@
                                                      </svg>
 
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -967,7 +1027,7 @@
                                 </div>
 
                                 <!-- Product item 9-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item9.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -985,7 +1045,7 @@
                                                      </svg>
 
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -1035,7 +1095,7 @@
                                 </div>
 
                                 <!-- Product item 10-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item10.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1059,7 +1119,7 @@
                                                      </svg>
 
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -1108,7 +1168,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 1-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <div class="home-product__item ">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item1.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1167,7 +1227,7 @@
                                     </div>
                                 </div>
                                 <!-- Product item 2-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item2.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1229,7 +1289,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 3-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item3.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1246,7 +1306,7 @@
                                                         <path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="#F69113" fill="#f69113"></path>
                                                      </svg>
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
                                             </div>
                                             <div class="product__price">
                                                 <div class="product__price-old"><span>₫</span>198.000</div>
@@ -1294,7 +1354,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 4-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item4.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1356,7 +1416,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 5-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item5.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1379,7 +1439,7 @@
                                                         <path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="#F69113" fill="#f69113"></path>
                                                      </svg>
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -1428,7 +1488,7 @@
                                     </a>
                                 </div>
                                 <!-- Product item 6-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item6.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1445,7 +1505,7 @@
                                                         <path d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3" stroke-width="1" transform="rotate(180) translate(-3 -15)" stroke="#F69113" fill="#f69113"></path>
                                                      </svg>
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
                                             </div>
                                             <div class="product__price">
                                                 <div class="product__price-old"><span>₫</span>168.000</div>
@@ -1494,7 +1554,7 @@
                                 </div>
 
                                 <!-- Product item 7-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item7.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1518,7 +1578,7 @@
                                                      </svg>
 
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -1568,7 +1628,7 @@
                                 </div>
 
                                 <!-- Product item 8-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item8.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1592,7 +1652,7 @@
                                                      </svg>
 
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -1642,7 +1702,7 @@
                                 </div>
 
                                 <!-- Product item 9-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item9.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1660,7 +1720,7 @@
                                                      </svg>
 
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -1710,7 +1770,7 @@
                                 </div>
 
                                 <!-- Product item 10-->
-                                <div class="grid__col-2-4">
+                                <div class="col-lg-2-4 col-md-3 col-xs-6 col-sm-6">
                                     <a class="home-product__item" href="#">
                                         <div class="home-product__item__img" style="background-image: url('assets/image/item10.jfif') ;">
                                             <div class="home-product__item__img-sub" style="background-image: url('assets/image/6.6.png');"></div>
@@ -1734,7 +1794,7 @@
                                                      </svg>
 
                                                 </div>
-                                                <div class="product__sale-time">Mua để nhận quà</div>
+
 
                                             </div>
                                             <div class="product__price">
@@ -1784,6 +1844,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Pagination -->
                         <ul class="pagination">
                             <li class="pagination-item">
                                 <a href="#" class="pagination-item__link">
@@ -1807,9 +1868,30 @@
                             </li>
                             <li class="pagination-item">
                                 <a href="#" class="pagination-item__link">
+                                4
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">
+                                5
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">
+                                ...
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">
+                                10
+                                </a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="#" class="pagination-item__link">
                                     <i class="pagination-item__icon fa-solid fa-angle-right"></i>
                                 </a>
                             </li>
+
                         </ul>
                     </div>
                 </div>
@@ -1817,9 +1899,9 @@
         </div>
 
         <div class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__col-3">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                         <h3 class="footer-heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -1833,7 +1915,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__col-3">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                         <h3 class="footer-heading">Giới thiệu</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -1848,7 +1930,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__col-3">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                         <h3 class="footer-heading">Theo dõi</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -1869,7 +1951,7 @@
                         </ul>
 
                     </div>
-                    <div class="grid__col-3">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                         <h3 class="footer-heading">Ứng dụng</h3>
                         <div class="footer__qr ">
                             <img src="assets/image/d91264e165ed6facc6178994d5afae79.png" alt="" class="footer__qr-img">
