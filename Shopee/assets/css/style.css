@@ -1949,7 +1949,7 @@ a {
 }
 
 .app__container .home-product .home-product__item .banner-mall {
-    background: url("assets/image/mall.png") no-repeat center/70%;
+    background: url("../image/mall.png") no-repeat center/70%;
     top: 12px;
     left: -3px;
     position: absolute;
