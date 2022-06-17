@@ -1377,7 +1377,6 @@ a {
         font-size: 0.7rem;
         padding: 4px 5px 3px;
         line-height: 0.8rem;
-        transform: scaleY(0.9);
         font-family: Arial, Helvetica, sans-serif; }
         .app__container .home-product .home-product__item .banner-shopee::after {
           content: "";
