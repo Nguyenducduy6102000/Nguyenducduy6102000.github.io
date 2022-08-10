@@ -46,6 +46,10 @@ $gutter: 30px;
                 padding: $gutter / 2;
             }
         }
+        .col-lg-2-4 {
+            width: (100% / $col) * 2.4;
+            padding: 0 $gutter / 2;
+        }
     }
     @include xl {
         @for $i from 1 through $col {

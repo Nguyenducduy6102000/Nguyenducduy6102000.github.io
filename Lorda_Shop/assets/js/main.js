@@ -7,7 +7,7 @@ $(function () {
         mouseDrag: true,
         nav: true,
         navText: ["", ""],
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
         dots: false,
@@ -63,6 +63,31 @@ $(function () {
         });
 
     });
+    /* $(window).scroll(function (event) {
+        var pos_body = $('html,body').scrollTop();
+        // console.log(pos_body);
+        if (pos_body > 120) {
+            $('.header__fix').css("display", "block");
+        } else {
+            $('.header__fix').css("display", "none");
+
+        }
+    }); */
+
+    $('.btn-mobile').on('click', function () {
+        $('#mobile-modal').css('display', 'block');
+    })
+    $('#mobile-modal').on('click', function () {
+        $('#mobile-modal').css('display', 'none');
+    });
+
+
+
+    $(".wrap-modal").click(function (event) {
+        event.stopPropagation();
+    });
+
+
 })
 
 
