@@ -114,26 +114,30 @@ const app = {
         playlist.innerHTML = htmls.join('')
     },
 
-    defineProperties: function () {
+    /* defineProperties: function () {
         Object.defineProperty(this, 'currentSong', {
             get: function () {
                 return this.songs[this.currentIndex];
             }
         })
+    }, */
+
+    currentSong: function () {
+        return this.songs[this.currentIndex];
+
     },
 
-
     loadCurrentSong: function () {
-        heading.textContent = this.currentSong.name;
-        cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`;
-        audio.src = this.currentSong.path;
+        heading.textContent = this.currentSong().name;
+        cdThumb.style.backgroundImage = `url('${this.currentSong().image}')`;
+        audio.src = this.currentSong().path;
         this.setConfig('indexSong', this.currentIndex);
     },
 
     loadConfig: function () {
         this.isRandom = this.config.isRandom;
         this.isReapeat = this.config.isReapeat;
-        // this.currentIndex = this.config.indexSong;
+        this.currentIndex = this.config.indexSong;
     },
 
     handleEvents: function () {
@@ -342,7 +346,7 @@ const app = {
         this.loadConfig();
 
         // Định nhĩa các thuộc tính cho object
-        this.defineProperties();
+        // this.defineProperties();
 
         // tải thông tin bài hát đầu tiên vào UI khi chạy ứng dụng 
         this.loadCurrentSong();
