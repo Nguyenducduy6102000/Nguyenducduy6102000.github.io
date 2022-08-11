@@ -133,7 +133,7 @@ const app = {
     loadConfig: function () {
         this.isRandom = this.config.isRandom;
         this.isReapeat = this.config.isReapeat;
-        this.currentIndex = this.config.indexSong;
+        // this.currentIndex = this.config.indexSong;
     },
 
     handleEvents: function () {
